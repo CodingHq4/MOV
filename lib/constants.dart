@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xffDCC488);
+const kSecondaryColor = Color(0xffA68227);
 const kIntroTextStyle = TextStyle(
   fontSize: 25,
   fontWeight: FontWeight.w600,
@@ -15,3 +16,5 @@ const kSignupHeadingTextStyle = TextStyle(
   color: Color(0xff9F8541),
 );
 const kHorizontalPadding = EdgeInsets.symmetric(horizontal: 18);
+const kHeadingTextStyle = TextStyle(
+    fontSize: 22, fontWeight: FontWeight.w600, fontFamily: 'RobotoSlab');

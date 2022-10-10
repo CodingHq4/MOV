@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:mov/constants.dart';
 
 class CustomisedButton extends StatelessWidget {
-  CustomisedButton({required this.onPressed, required this.title});
+  CustomisedButton({
+    required this.onPressed,
+    required this.title,
+    required this.textColor,
+    required this.buttonColor,
+  });
   final Function() onPressed;
   final String title;
+  final Color buttonColor;
+  final Color textColor;
   @override
   Widget build(BuildContext context) {
     return FlatButton(
@@ -13,13 +20,14 @@ class CustomisedButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(4),
       ),
-      color: kPrimaryColor,
+      color: buttonColor,
       onPressed: onPressed,
       child: Text(
         title,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w500,
+          color: textColor,
         ),
       ),
     );

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mov/constants.dart';
 import 'package:mov/view/onboarding/sign_up/components/customised_button.dart';
-import 'package:mov/view/onboarding/sign_up/components/user_info.dart';
+import 'package:mov/view/onboarding/sign_up/user_info.dart';
 
 class EmailVerification extends StatelessWidget {
   const EmailVerification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -16,7 +18,7 @@ class EmailVerification extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 10),
+                  SizedBox(height: size.height * 0.01),
                   const Icon(
                     Icons.email,
                     size: 25,
@@ -30,7 +32,8 @@ class EmailVerification extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         fontFamily: 'RobotoSlab'),
                   ),
-                  const SizedBox(height: 38),
+                  // const SizedBox(height: 38),
+                  SizedBox(height: size.height * 0.055),
                   RichText(
                     // textScaleFactor: 1.1,
                     textAlign: TextAlign.center,
@@ -50,10 +53,14 @@ class EmailVerification extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   TextField(
-                    onChanged:(input){},
+                    onChanged: (input) {},
                     decoration: InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: size.width * 0.03,
+                        vertical: size.height * 0.01,
+                      ),
                       hintText: 'Enter verification code',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(4),
